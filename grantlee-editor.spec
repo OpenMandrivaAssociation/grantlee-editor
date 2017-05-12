@@ -28,6 +28,7 @@ BuildRequires:	cmake(KF5IMAP)
 BuildRequires:	cmake(KF5KaddressbookGrantlee)
 BuildRequires:	cmake(KF5PimTextEdit)
 BuildRequires:	cmake(KF5SyntaxHighlighting)
+BuildRequires:	boost-devel
 Provides:	grantleeeditor = %{EVRD}
 Conflicts:	contactthemeeditor < 3:17.04.0
 Conflicts:	grantleeeditor < 3:17.04.0

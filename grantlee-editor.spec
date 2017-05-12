@@ -40,18 +40,18 @@ Obsoletes:	headerthemeeditor < 3:17.04.0
 %description
 Grantlee editor for KDE PIM applications.
 
-%files
+%files -f all.lang
 %{_kde5_applicationsdir}/org.kde.contactprintthemeeditor.desktop
 %{_kde5_applicationsdir}/org.kde.contactthemeeditor.desktop
 %{_kde5_applicationsdir}/org.kde.headerthemeeditor.desktop
-%{_kde5_bindir}/contactprintthemeeditor
-%{_kde5_bindir}/contactthemeeditor
-%{_kde5_bindir}/headerthemeeditor
-%{_kde5_datadir}/config.kcfg/grantleethemeeditor.kcfg
-%{_kde5_docdir}/*/*/contactthemeeditor
-%{_kde5_docdir}/*/*/headerthemeeditor
-%{_kde5_sysconfdir}/xdg/grantleeditor.categories
-%{_kde5_sysconfdir}/xdg/grantleeditor.renamecategories
+%{_bindir}/contactprintthemeeditor
+%{_bindir}/contactthemeeditor
+%{_bindir}/headerthemeeditor
+%{_datadir}/config.kcfg/grantleethemeeditor.kcfg
+%{_docdir}/*/*/contactthemeeditor
+%{_docdir}/*/*/headerthemeeditor
+%{_sysconfdir}/xdg/grantleeditor.categories
+%{_sysconfdir}/xdg/grantleeditor.renamecategories
 
 #----------------------------------------------------------------------------
 
@@ -66,7 +66,7 @@ Group:		System/Libraries
 KDE PIM shared library.
 
 %files -n %{libgrantleethemeeditor}
-%{_kde5_libdir}/libgrantleethemeeditor.so.%{grantleethemeeditor_major}*
+%{_libdir}/libgrantleethemeeditor.so.%{grantleethemeeditor_major}*
 
 #----------------------------------------------------------------------
 
@@ -80,4 +80,11 @@ KDE PIM shared library.
 %install
 %ninja_install -C build
 
-rm -rf %{buildroot}%{_kde5_libdir}/libgrantleethemeeditor.so
+rm -rf %{buildroot}%{_libdir}/libgrantleethemeeditor.so
+
+%find_lang contactthemeeditor
+%find_lang headerthemeeditor
+%find_lang libgrantleethemeeditor
+%find_lang contactprintthemeeditor
+
+cat *.lang >all.lang

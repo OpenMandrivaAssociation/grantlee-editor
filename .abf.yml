@@ -1,2 +1,4 @@
-sources:
+removed_sources:
   grantlee-editor-17.12.1.tar.xz: 938a3670febdd5458fec01fc6e45afef5769a4e9
+sources:
+  grantlee-editor-17.12.2.tar.xz: c9774f3e36ea1da31f788750ea6002ae10f8e505

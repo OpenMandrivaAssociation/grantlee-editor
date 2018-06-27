@@ -12,6 +12,8 @@ BuildRequires:	pkgconfig(Qt5Core)
 BuildRequires:	pkgconfig(Qt5Widgets)
 BuildRequires:	pkgconfig(Qt5WebEngine)
 BuildRequires:	pkgconfig(Qt5WebEngineWidgets)
+BuildRequires:	boost-devel
+BuildRequires:	cmake(ECM)
 BuildRequires:	cmake(KF5Crash)
 BuildRequires:	cmake(KF5DBusAddons)
 BuildRequires:	cmake(KF5DocTools)
@@ -19,6 +21,7 @@ BuildRequires:	cmake(KF5XmlGui)
 BuildRequires:	cmake(KF5TextEditor)
 BuildRequires:	cmake(KF5NewStuff)
 BuildRequires:	cmake(KF5Archive)
+BuildRequires:	cmake(KF5Parts)
 BuildRequires:	cmake(KF5PimCommonAkonadi)
 BuildRequires:	cmake(KF5MessageViewer)
 BuildRequires:	cmake(KF5GrantleeTheme)
@@ -28,7 +31,8 @@ BuildRequires:	cmake(KF5IMAP)
 BuildRequires:	cmake(KF5KaddressbookGrantlee)
 BuildRequires:	cmake(KF5PimTextEdit)
 BuildRequires:	cmake(KF5SyntaxHighlighting)
-BuildRequires:	boost-devel
+BuildRequires:	cmake(QGpgme)
+BuildRequires:	cmake(KF5KIO)
 Provides:	grantleeeditor = %{EVRD}
 Conflicts:	contactthemeeditor < 3:17.04.0
 Conflicts:	grantleeeditor < 3:17.04.0

@@ -3,11 +3,12 @@
 Summary:	Grantlee editor for KDE PIM applications
 Name:		grantlee-editor
 Version:	19.04.2
-Release:	1
+Release:	2
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://www.kde.org
 Source0:	http://download.kde.org/%{stable}/applications/%{version}/src/%{name}-%{version}.tar.xz
+Patch0:		grantlee-editor-menus.patch
 BuildRequires:	cmake(ECM)
 BuildRequires:	pkgconfig(Qt5Core)
 BuildRequires:	pkgconfig(Qt5Widgets)
@@ -35,12 +36,6 @@ BuildRequires:	cmake(KF5SyntaxHighlighting)
 BuildRequires:	cmake(QGpgme)
 BuildRequires:	cmake(KF5KIO)
 Provides:	grantleeeditor = %{EVRD}
-Conflicts:	contactthemeeditor < 3:17.04.0
-Conflicts:	grantleeeditor < 3:17.04.0
-Conflicts:	headerthemeeditor < 3:17.04.0
-Obsoletes:	contactthemeeditor < 3:17.04.0
-Obsoletes:	grantleeeditor < 3:17.04.0
-Obsoletes:	headerthemeeditor < 3:17.04.0
 
 %description
 Grantlee editor for KDE PIM applications.
@@ -76,7 +71,7 @@ KDE PIM shared library.
 #----------------------------------------------------------------------
 
 %prep
-%setup -q
+%autosetup -p1
 %cmake_kde5
 
 %build

@@ -6,7 +6,7 @@ diff -up grantlee-editor-19.04.1/contactprintthemeeditor/org.kde.contactprintthe
  GenericName[zh_TW]=聯絡人列印主題編輯器
  Terminal=false
 -Categories=Qt;KDE;Office;Network;ContactManagement;
-+Categories=Qt;KDE;Office;Network;ContactManagement;X-MandrivaLinux-More;
++Categories=Qt;KDE;Office;Network;ContactManagement;X-KDE-More;
  InitialPreference=10
  X-DBUS-ServiceName=org.kde.contactprintthemeeditor
 diff -up grantlee-editor-19.04.1/contactthemeeditor/org.kde.contactthemeeditor.desktop.omv~ grantlee-editor-19.04.1/contactthemeeditor/org.kde.contactthemeeditor.desktop
@@ -17,7 +17,7 @@ diff -up grantlee-editor-19.04.1/contactthemeeditor/org.kde.contactthemeeditor.d
  GenericName[zh_TW]=聯絡人主題編輯器
  Terminal=false
 -Categories=Qt;KDE;Office;Network;ContactManagement;
-+Categories=Qt;KDE;Office;Network;ContactManagement;X-MandrivaLinux-More;
++Categories=Qt;KDE;Office;Network;ContactManagement;X-KDE-More;
  InitialPreference=10
  X-DBUS-ServiceName=org.kde.contactthemeeditor
 diff -up grantlee-editor-19.04.1/headerthemeeditor/org.kde.headerthemeeditor.desktop.omv~ grantlee-editor-19.04.1/headerthemeeditor/org.kde.headerthemeeditor.desktop
@@ -28,6 +28,6 @@ diff -up grantlee-editor-19.04.1/headerthemeeditor/org.kde.headerthemeeditor.des
  GenericName[zh_TW]=郵件標頭主題編輯器
  Terminal=false
 -Categories=Qt;KDE;Office;Network;Email;
-+Categories=Qt;KDE;Office;Network;Email;X-MandrivaLinux-More;
++Categories=Qt;KDE;Office;Network;Email;X-KDE-More;
  InitialPreference=10
  X-DBUS-ServiceName=org.kde.headerthemeeditor

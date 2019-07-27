@@ -2,7 +2,7 @@
 
 Summary:	Grantlee editor for KDE PIM applications
 Name:		grantlee-editor
-Version:	19.04.3
+Version:	19.07.80
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
@@ -50,8 +50,8 @@ Grantlee editor for KDE PIM applications.
 %{_datadir}/config.kcfg/grantleethemeeditor.kcfg
 %{_docdir}/*/*/contactthemeeditor
 %{_docdir}/*/*/headerthemeeditor
-%{_sysconfdir}/xdg/grantleeditor.categories
-%{_sysconfdir}/xdg/grantleeditor.renamecategories
+%{_datadir}/qlogging-categories5/grantleeditor.categories
+%{_datadir}/qlogging-categories5/grantleeditor.renamecategories
 
 #----------------------------------------------------------------------------
 

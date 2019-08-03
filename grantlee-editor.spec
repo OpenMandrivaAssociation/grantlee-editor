@@ -2,7 +2,7 @@
 
 Summary:	Grantlee editor for KDE PIM applications
 Name:		grantlee-editor
-Version:	19.07.80
+Version:	19.07.90
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/KDE

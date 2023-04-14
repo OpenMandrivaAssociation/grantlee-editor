@@ -2,8 +2,8 @@
 
 Summary:	Grantlee editor for KDE PIM applications
 Name:		grantlee-editor
-Version:	22.12.3
-Release:	2
+Version:	23.03.90
+Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://www.kde.org
@@ -25,7 +25,7 @@ BuildRequires:	cmake(KF5NewStuff)
 BuildRequires:	cmake(KF5Archive)
 BuildRequires:	cmake(KF5Parts)
 BuildRequires:	cmake(KF5PimCommonAkonadi)
-BuildRequires:	cmake(KF5MessageViewer)
+BuildRequires:	cmake(KPim5MessageViewer)
 BuildRequires:	cmake(KF5GrantleeTheme)
 BuildRequires:	cmake(KF5AkonadiMime)
 BuildRequires:	cmake(KF5Libkleo)

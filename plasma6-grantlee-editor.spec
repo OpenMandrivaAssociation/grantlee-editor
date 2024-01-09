@@ -12,7 +12,7 @@ Patch0:		grantlee-editor-menus.patch
 BuildRequires:	cmake(ECM)
 BuildRequires:	pkgconfig(Qt6Core)
 BuildRequires:	pkgconfig(Qt6Widgets)
-BuildRequires:	pkgconfig(Qt6WebEngine)
+BuildRequires:	pkgconfig(Qt6WebEngineCore)
 BuildRequires:	pkgconfig(Qt6WebEngineWidgets)
 BuildRequires:	boost-devel
 BuildRequires:	cmake(ECM)
@@ -28,9 +28,8 @@ BuildRequires:	cmake(KPim6PimCommon)
 BuildRequires:	cmake(KPim6MessageViewer)
 BuildRequires:	cmake(KPim6GrantleeTheme)
 BuildRequires:	cmake(KPim6AkonadiMime)
-BuildRequires:	cmake(KF6Libkleo)
+BuildRequires:	cmake(KPim6Libkleo)
 BuildRequires:	cmake(KPim6IMAP)
-BuildRequires:	cmake(KF6PimTextEdit)
 BuildRequires:	cmake(KF6SyntaxHighlighting)
 BuildRequires:	cmake(QGpgme)
 BuildRequires:	cmake(KF6KIO)
@@ -40,9 +39,9 @@ Provides:	grantleeeditor = %{EVRD}
 Grantlee editor for KDE PIM applications.
 
 %files -f all.lang
-%{_kde6_applicationsdir}/org.kde.contactprintthemeeditor.desktop
-%{_kde6_applicationsdir}/org.kde.contactthemeeditor.desktop
-%{_kde6_applicationsdir}/org.kde.headerthemeeditor.desktop
+%{_datadir}/applications/org.kde.contactprintthemeeditor.desktop
+%{_datadir}/applications/org.kde.contactthemeeditor.desktop
+%{_datadir}/applications/org.kde.headerthemeeditor.desktop
 %{_bindir}/contactprintthemeeditor
 %{_bindir}/contactthemeeditor
 %{_bindir}/headerthemeeditor
@@ -66,11 +65,12 @@ KDE PIM shared library.
 
 %files -n %{libgrantleethemeeditor}
 %{_libdir}/libgrantleethemeeditor.so.%{grantleethemeeditor_major}*
+%{_libdir}/libgrantleethemeeditor.so.5*
 
 #----------------------------------------------------------------------
 
 %prep
-%autosetup -p1
+%autosetup -p1 -n grantlee-editor-%{version}
 %cmake \
 	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON \
 	-G Ninja

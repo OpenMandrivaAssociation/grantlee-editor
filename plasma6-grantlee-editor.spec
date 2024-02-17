@@ -1,13 +1,20 @@
+%define git 20240217
+%define gitbranch release/24.02
+%define gitbranchd %(echo %{gitbranch} |sed -e "s,/,-,g")
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 
 Summary:	Grantlee editor for KDE PIM applications
 Name:		plasma6-grantlee-editor
-Version:	24.01.95
-Release:	1
+Version:	24.01.96
+Release:	%{?git:0.%{git}.}1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://www.kde.org
+%if 0%{?git:1}
+Source0:	https://invent.kde.org/pim/grantlee-editor/-/archive/%{gitbranch}/grantlee-editor-%{gitbranchd}.tar.bz2#/grantlee-editor-%{git}.tar.bz2
+%else
 Source0:	http://download.kde.org/%{stable}/release-service/%{version}/src/grantlee-editor-%{version}.tar.xz
+%endif
 Patch0:		grantlee-editor-menus.patch
 BuildRequires:	cmake(ECM)
 BuildRequires:	pkgconfig(Qt6Core)
@@ -66,12 +73,11 @@ KDE PIM shared library.
 
 %files -n %{libgrantleethemeeditor}
 %{_libdir}/libgrantleethemeeditor.so.%{grantleethemeeditor_major}*
-%{_libdir}/libgrantleethemeeditor.so.5*
 
 #----------------------------------------------------------------------
 
 %prep
-%autosetup -p1 -n grantlee-editor-%{version}
+%autosetup -p1 -n grantlee-editor-%{?git:%{gitbranchd}}%{!?git:%{version}}
 %cmake \
 	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON \
 	-G Ninja

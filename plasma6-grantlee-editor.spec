@@ -9,7 +9,7 @@ Version:	24.08.2
 Release:	%{?git:0.%{git}.}1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
-Url:		http://www.kde.org
+Url:		https://www.kde.org
 %if 0%{?git:1}
 Source0:	https://invent.kde.org/pim/grantlee-editor/-/archive/%{gitbranch}/grantlee-editor-%{gitbranchd}.tar.bz2#/grantlee-editor-%{git}.tar.bz2
 %else

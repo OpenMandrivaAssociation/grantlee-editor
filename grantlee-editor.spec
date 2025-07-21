@@ -5,7 +5,7 @@
 
 Summary:	Grantlee editor for KDE PIM applications
 Name:		grantlee-editor
-Version:	25.04.0
+Version:	25.04.3
 Release:	%{?git:0.%{git}.}1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
@@ -43,10 +43,15 @@ BuildRequires:	cmake(QGpgme)
 BuildRequires:	cmake(KF6KIO)
 Provides:	grantleeeditor = %{EVRD}
 
+%rename plasma6-grantlee-editor
+
+BuildSystem:	cmake
+BuildOption:	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON
+
 %description
 Grantlee editor for KDE PIM applications.
 
-%files -f all.lang
+%files -f %{name}.lang
 %{_datadir}/applications/org.kde.contactprintthemeeditor.desktop
 %{_datadir}/applications/org.kde.contactthemeeditor.desktop
 %{_datadir}/applications/org.kde.headerthemeeditor.desktop
@@ -54,8 +59,6 @@ Grantlee editor for KDE PIM applications.
 %{_bindir}/contactthemeeditor
 %{_bindir}/headerthemeeditor
 %{_datadir}/config.kcfg/grantleethemeeditor.kcfg
-%{_docdir}/*/*/contactthemeeditor
-%{_docdir}/*/*/headerthemeeditor
 %{_datadir}/qlogging-categories6/grantleeditor.categories
 %{_datadir}/qlogging-categories6/grantleeditor.renamecategories
 
@@ -73,26 +76,3 @@ KDE PIM shared library.
 
 %files -n %{libgrantleethemeeditor}
 %{_libdir}/libgrantleethemeeditor.so.%{grantleethemeeditor_major}*
-
-#----------------------------------------------------------------------
-
-%prep
-%autosetup -p1 -n grantlee-editor-%{?git:%{gitbranchd}}%{!?git:%{version}}
-%cmake \
-	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON \
-	-G Ninja
-
-%build
-%ninja -C build
-
-%install
-%ninja_install -C build
-
-rm -rf %{buildroot}%{_libdir}/libgrantleethemeeditor.so
-
-%find_lang contactthemeeditor
-%find_lang headerthemeeditor
-%find_lang libgrantleethemeeditor
-%find_lang contactprintthemeeditor
-
-cat *.lang >all.lang

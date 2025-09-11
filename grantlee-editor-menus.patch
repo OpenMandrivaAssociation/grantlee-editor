@@ -1,28 +1,28 @@
-diff -up grantlee-editor-24.05.0/contactprintthemeeditor/org.kde.contactprintthemeeditor.desktop.1~ grantlee-editor-24.05.0/contactprintthemeeditor/org.kde.contactprintthemeeditor.desktop
---- grantlee-editor-24.05.0/contactprintthemeeditor/org.kde.contactprintthemeeditor.desktop.1~	2024-05-23 19:42:19.873295482 +0200
-+++ grantlee-editor-24.05.0/contactprintthemeeditor/org.kde.contactprintthemeeditor.desktop	2024-05-23 19:44:44.254864571 +0200
-@@ -81,5 +81,5 @@ GenericName[uk]=Редактор тем
- GenericName[x-test]=xxContact Print Theme Editorxx
+diff -up grantlee-editor-25.08.1/contactprintthemeeditor/org.kde.contactprintthemeeditor.desktop.1~ grantlee-editor-25.08.1/contactprintthemeeditor/org.kde.contactprintthemeeditor.desktop
+--- grantlee-editor-25.08.1/contactprintthemeeditor/org.kde.contactprintthemeeditor.desktop.1~	2025-09-08 06:05:03.000000000 +0200
++++ grantlee-editor-25.08.1/contactprintthemeeditor/org.kde.contactprintthemeeditor.desktop	2025-09-11 20:22:36.522049739 +0200
+@@ -83,5 +83,5 @@ GenericName[tr]=Kişi Yazdırma Teması
+ GenericName[uk]=Редактор тем для друку записів контактів
  GenericName[zh_CN]=联系人打印主题编辑器
  GenericName[zh_TW]=聯絡人列印主題編輯器
 -Categories=Qt;KDE;Office;Network;ContactManagement;
 +Categories=Qt;KDE;Office;Network;ContactManagement;X-KDE-More;
  InitialPreference=10
-diff -up grantlee-editor-24.05.0/contactthemeeditor/org.kde.contactthemeeditor.desktop.1~ grantlee-editor-24.05.0/contactthemeeditor/org.kde.contactthemeeditor.desktop
---- grantlee-editor-24.05.0/contactthemeeditor/org.kde.contactthemeeditor.desktop.1~	2024-05-23 19:42:19.873295482 +0200
-+++ grantlee-editor-24.05.0/contactthemeeditor/org.kde.contactthemeeditor.desktop	2024-05-23 19:44:56.702999766 +0200
-@@ -91,5 +91,5 @@ GenericName[uk]=Редактор тем
- GenericName[x-test]=xxContact Theme Editorxx
+diff -up grantlee-editor-25.08.1/contactthemeeditor/org.kde.contactthemeeditor.desktop.1~ grantlee-editor-25.08.1/contactthemeeditor/org.kde.contactthemeeditor.desktop
+--- grantlee-editor-25.08.1/contactthemeeditor/org.kde.contactthemeeditor.desktop.1~	2025-09-08 06:05:03.000000000 +0200
++++ grantlee-editor-25.08.1/contactthemeeditor/org.kde.contactthemeeditor.desktop	2025-09-11 22:17:50.240481391 +0200
+@@ -93,5 +93,5 @@ GenericName[ug]=ئۆرنەك تەھرى�
+ GenericName[uk]=Редактор тем контактів
  GenericName[zh_CN]=联系人主题编辑器
  GenericName[zh_TW]=聯絡人主題編輯器
 -Categories=Qt;KDE;Office;Network;ContactManagement;
 +Categories=Qt;KDE;Office;Network;ContactManagement;X-KDE-More;
  InitialPreference=10
-diff -up grantlee-editor-24.05.0/headerthemeeditor/org.kde.headerthemeeditor.desktop.1~ grantlee-editor-24.05.0/headerthemeeditor/org.kde.headerthemeeditor.desktop
---- grantlee-editor-24.05.0/headerthemeeditor/org.kde.headerthemeeditor.desktop.1~	2024-05-23 19:42:19.877295525 +0200
-+++ grantlee-editor-24.05.0/headerthemeeditor/org.kde.headerthemeeditor.desktop	2024-05-23 19:45:08.899132212 +0200
-@@ -91,5 +91,5 @@ GenericName[wa]=Aspougneu di tinmes di t
- GenericName[x-test]=xxMail Header Theme Editorxx
+diff -up grantlee-editor-25.08.1/headerthemeeditor/org.kde.headerthemeeditor.desktop.1~ grantlee-editor-25.08.1/headerthemeeditor/org.kde.headerthemeeditor.desktop
+--- grantlee-editor-25.08.1/headerthemeeditor/org.kde.headerthemeeditor.desktop.1~	2025-09-08 06:05:03.000000000 +0200
++++ grantlee-editor-25.08.1/headerthemeeditor/org.kde.headerthemeeditor.desktop	2025-09-11 22:18:04.852655570 +0200
+@@ -93,5 +93,5 @@ GenericName[uk]=Редактор тем
+ GenericName[wa]=Aspougneu di tinmes di tiestire d' emile
  GenericName[zh_CN]=邮件消息头主题编辑器
  GenericName[zh_TW]=郵件標頭主題編輯器
 -Categories=Qt;KDE;Office;Network;Email;
